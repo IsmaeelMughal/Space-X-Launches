@@ -1,0 +1,12 @@
+version: "3"
+services:
+  spring-backend:
+    image: space-x-backend
+    ports:
+      - "8080:8080"
+  react-frontend:
+    image: space-x-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - spring-backend
